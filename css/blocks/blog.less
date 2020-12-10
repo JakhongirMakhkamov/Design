@@ -1,0 +1,59 @@
+// main: ../styles.less
+
+.blog {
+  margin-top: 200px;
+  margin-bottom: 120px;
+
+  @media @tablet {
+    margin-top: 180px;
+    margin-bottom: 50px;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 55px;
+
+    @media @tablet {
+      margin-bottom: 40px;
+    }
+
+    @media @mobile {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__title{
+    font-size: 45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+
+    @media @mobile-sm {
+      font-size: 35px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: @light-grey;
+
+    @media @mobile-sm {
+      font-size: 15px;
+    }
+  }
+
+  &__footer {
+    text-align: right;
+
+    a {
+      font-style: 14px;
+      line-height: 1.4;
+      color: @grey;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

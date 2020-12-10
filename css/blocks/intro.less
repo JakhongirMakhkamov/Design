@@ -1,0 +1,98 @@
+// main: ../styles.less
+
+.intro {
+
+  &__inner {
+    position: relative;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    background-image: url("../images/intro/symbols.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    border-bottom: 1px solid fade(@grey, 30%);
+
+    @media @tablet {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-size: 400px auto;
+    }
+
+    @media @mobile {
+      background-size: 320px auto;
+      padding-top: 30px;
+    }
+  }
+
+  &__content {
+    width: 50%;
+
+    @media @mobile {
+      .btn {
+        display: block;
+        width: 100%;
+
+        + .btn {
+          margin-left: 0;
+          margin-top: 15px;
+        }
+      }
+    }
+
+    @media @mobile-sm {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__suptitle {
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 1.17;
+
+    @media @tablet {
+      font-size: 21px;
+    }
+  }
+
+  &__title {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.17;
+    margin-bottom: 5px;
+
+    @media @tablet {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    color: fade(@black, 70%);
+    line-height: 1.22;
+    margin-bottom: 25px;
+  }
+
+  &__photo {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    z-index: 1;
+
+    @media @tablet {
+      width: 350px;
+    }
+
+    @media @mobile {
+      width: 300px;
+    }
+
+    @media @mobile-sm {
+      display: none;
+    }
+  }
+
+  @media @mobile {
+    margin-top: 80px;
+  }
+}

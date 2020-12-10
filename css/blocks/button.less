@@ -1,0 +1,82 @@
+// main: ../styles.less
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.56;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: @black;
+  padding: 12px 30px;
+  border: 1px solid @grey;
+  border-radius: 30px;
+  background: none;
+  cursor: pointer;
+  transition: background-color .2s linear, color .2s linear, box-shadow .2s linear, border-color .2s linear;
+
+  + .btn {
+    margin-left: 15px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: @black;
+    color: @white;
+    box-shadow: 2px 2px 10px fade(#000, 24%);
+    border-color: @black;
+  }
+
+  @media @tablet {
+    font-size: 15px;
+    padding: 10px 24px;
+  }
+
+  @media @mobile {
+    font-size: 15px;
+    padding: 10px 24px;
+  }
+
+  @media @mobile-sm {
+    display: block;
+    width: 100%;
+
+    + .btn {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }
+
+  // Modificators
+
+  &--sm {
+    font-size: 14px;
+    font-weight: 700;
+    border-width: 2px;
+    letter-spacing: 0.7px;
+    line-height: 1.42;
+    padding: 8px 20px;
+  }
+
+  &--light {
+    color: @light-grey;
+    border-color: @light-grey;
+
+    &:hover {
+      background-color: @light-grey;
+      color: @black;
+      border-color: @light-grey;
+    }
+  }
+
+  &--modal {
+    min-width: 150px;
+    font-size: 12px;
+  }
+}

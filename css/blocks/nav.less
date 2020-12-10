@@ -1,0 +1,70 @@
+// main: ../styles.less
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__link {
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: @black;
+    letter-spacing: 0.7px;
+    margin-right: 35px;
+    padding: 5px 0;
+
+    @media @mobile {
+      width: 100%;
+      top: 0;
+      margin-right: 0;
+      padding: 0 15px 8px;
+      text-align: center;
+      color: @grey;
+    }
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: @black;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform .4s ease;
+  }
+
+  &__link:hover::after {
+    transform: scaleX(1);
+  }
+
+  @media @mobile {
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: @black;
+    overflow-y: hidden;
+    transition: width .4s linear;
+    white-space: nowrap;
+    justify-content: center;
+
+    button {
+      color: @grey;
+
+      @media @mobile {
+        margin: 0 15px;
+      }
+    }
+
+    &.show {
+      width: 40%;
+    }
+  }
+}

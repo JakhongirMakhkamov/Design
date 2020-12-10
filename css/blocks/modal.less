@@ -1,0 +1,92 @@
+// main: ../styles.less
+
+.modal {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  z-index: 10;
+  background-color: fade(@black, 95%);
+  padding: 15px;
+  overflow: auto;
+  transition: top 0s ease-in-out .2s;
+
+  &__dialogue {
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    transform: scale(1.5);
+    opacity: 0.5;
+    transition: all .3s ease-in-out;
+
+    @media @laptop {
+      max-width: 950px;
+    }
+
+    @media @tablet {
+      max-width: 700px;
+    }
+
+    &--sm {
+      max-width: 900px;
+
+      @media @tablet {
+        max-width: 700px;
+      }
+    }
+  }
+
+  &.active .modal__dialogue {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    transition: transform .2s linear;
+    outline: none;
+  }
+
+  &__content {
+    padding: 72px 15px;
+
+    @media @tablet {
+      padding: 42px 15px;
+    }
+  }
+
+  &__title {
+    font-size: 45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 54px;
+
+    @media @tablet {
+      margin-bottom: 30px;
+    }
+
+    @media @mobile {
+      font-size: 35px;
+    }
+
+    @media @mobile-sm {
+      font-size: 25px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}

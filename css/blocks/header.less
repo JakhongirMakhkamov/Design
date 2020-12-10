@@ -1,0 +1,21 @@
+// main: ../styles.less
+
+.header {
+  position: relative;
+  padding: 18px 0;
+
+  @media @mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+  }
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+}

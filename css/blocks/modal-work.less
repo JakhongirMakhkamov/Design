@@ -1,0 +1,132 @@
+// main: ../styles.less
+
+.modal-work {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__preview {
+    width: 65%;
+    position: relative;
+    overflow: hidden;
+
+    @media @tablet {
+      width: 100%;
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%,-50%,0);
+
+    @media @tablet {
+      width: 100%;
+      height: auto;
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate3d(0%,0%,0);
+    }
+  }
+
+  &__content {
+    position: relative;
+    width: 35%;
+    padding: 25px;
+
+    @media @tablet {
+      width: 100%;
+    }
+
+    @media @mobile-sm {
+      padding: 15px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 32px;
+    text-transform: uppercase;
+
+    @media @mobile {
+      font-size: 20px;
+    }
+
+    @media @mobile-sm {
+      font-size: 18px;
+    }
+  }
+
+  &__info {
+    font-size: 18px;
+    color: @grey;
+    text-transform: uppercase;
+
+    @media @mobile {
+      font-size: 15px;
+    }
+
+    span {
+      margin: 0 15px;
+    }
+  }
+
+  &__client {
+    margin-bottom: 30px;
+
+    &-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &-company {
+      font-size: 14px;
+      font-style: italic;
+      color: @grey;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2;
+    color: @grey;
+    margin-bottom: 45px;
+  }
+
+  &__footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px 25px;
+  }
+
+  &__btn {
+    font-family: inherit;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+
+    @media @mobile-sm {
+      font-size: 12px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

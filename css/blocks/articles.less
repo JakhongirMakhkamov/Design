@@ -1,0 +1,85 @@
+// main: ../styles.less
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+
+  &__column {
+    width: 33.33333%;
+    padding: 15px;
+
+    @media @mobile {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    @media @mobile {
+      max-width: 370px;
+      margin: 0 auto;
+    }
+  }
+
+  &__header {
+    position: relative;
+    margin-bottom: 18px;
+  }
+
+  &__date {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 77px;
+    height: 77px;
+    top: 0
+    left: 0;
+    z-index: 1;
+    background-color: @black;
+    font-size: 16px;
+    line-height: 1.4;
+    color: @white;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @media @tablet {
+      font-size: 15px;
+    }
+  }
+
+  &__category {
+    font-size: 12px;
+    line-height: 2;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+
+    @media @mobile {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 2;
+    font-weight: 300;
+    color: @grey;
+    margin-bottom: 23px;
+  }
+}

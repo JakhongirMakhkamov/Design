@@ -1,0 +1,44 @@
+//main: ../styles.less
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__left {
+    width: 47%;
+    padding: 30px;
+
+    @media @mobile {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 30px 0 44px;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    &__icon {
+      margin-right: 8px;
+    }
+  }
+
+  &__right {
+    width: 53%;
+    background: @grey url(https://via.placeholder.com/480x740);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media @mobile {
+      display: none;
+    }
+  }
+}

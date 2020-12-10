@@ -1,0 +1,31 @@
+// main: ../styles.less
+
+.skills-bar {
+  margin-bottom: 30px;
+
+  &__item {
+    width: 100%;
+    max-width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  &__bar {
+    width: 139px;
+    height: 6px;
+    background-color: #EFEFEF;
+  }
+
+  &__progress {
+    height: 100%;
+    background-color: @grey;
+    transition: width .2s linear;
+  }
+}
